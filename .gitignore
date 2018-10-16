@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+# Secret keys
+.strava_client_secret
+
+# vim swapfiles
+*.swp
