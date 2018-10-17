@@ -106,6 +106,7 @@ venv.bak/
 
 # Secret keys
 .strava_client_secret
+.strava_client_id
 
 # vim swapfiles
 *.swp

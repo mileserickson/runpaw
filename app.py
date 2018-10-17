@@ -9,10 +9,13 @@ db = mc['runpaw']
 tokens = db['strava_tokens']
 
 
-REDIRECT_URI = 'http://localhost/authorization'
-STRAVA_CLIENT_ID = 29397
+with open('redirect_uri.txt') as f:
+    REDIRECT_URI = f.read().strip()
 with open('.strava_client_secret') as f:
     STRAVA_CLIENT_SECRET = f.read().strip()
+with open('.strava_client_id') as f:
+    STRAVA_CLIENT_ID = f.read().strip()
+
 
 def get_auth_url():
     """Get the Strava authorization URL."""
