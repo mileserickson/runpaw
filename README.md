@@ -1,3 +1,3 @@
 # RunPaw
 
-Strava API Integration Example
+Strava API Authentication Webpage
