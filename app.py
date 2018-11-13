@@ -29,7 +29,7 @@ AUTH_URL = get_auth_url()
 @app.route('/')
 def index():
     """Show the home page."""
-    return render_template('index.html', auth_url=AUTH_URL)
+    return render_template('index_2.html', auth_url=AUTH_URL)
 
 
 @app.route('/authorization')
