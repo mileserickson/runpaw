@@ -22,7 +22,7 @@ def get_auth_url():
     client = Client()
     auth_url = client.authorization_url(
         client_id=STRAVA_CLIENT_ID,
-        redirect_uri='http://localhost:5000/authorization')
+        redirect_uri= REDIRECT_URI)
     return auth_url
 
 

@@ -1,1 +1,1 @@
-https://52.11.221.12/authorization
+https://route.dsi.link/authorization
