@@ -9,17 +9,20 @@ db = mc['runpaw']
 tokens = db['strava_tokens']
 
 
-REDIRECT_URI = 'http://localhost/authorization'
-STRAVA_CLIENT_ID = 29397
+with open('redirect_uri.txt') as f:
+    REDIRECT_URI = f.read().strip()
 with open('.strava_client_secret') as f:
     STRAVA_CLIENT_SECRET = f.read().strip()
+with open('.strava_client_id') as f:
+    STRAVA_CLIENT_ID = f.read().strip()
+
 
 def get_auth_url():
     """Get the Strava authorization URL."""
     client = Client()
     auth_url = client.authorization_url(
         client_id=STRAVA_CLIENT_ID,
-        redirect_uri='http://localhost:5000/authorization')
+        redirect_uri= REDIRECT_URI)
     return auth_url
 
 
@@ -29,7 +32,7 @@ AUTH_URL = get_auth_url()
 @app.route('/')
 def index():
     """Show the home page."""
-    return render_template('index.html', auth_url=AUTH_URL)
+    return render_template('index_2.html', auth_url=AUTH_URL)
 
 
 @app.route('/authorization')
